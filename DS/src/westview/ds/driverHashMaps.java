@@ -1,6 +1,7 @@
 package westview.ds;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -51,11 +52,14 @@ public class driverHashMaps {
 		//
 		
 		
-		HashMap data = new HashMap<String, HashMap<String, String[]>>();
+		//HashMap data = new HashMap<String, HashMap<String, String[]>>();
+		//HashMap data = new HashMap<String, Integer[]>();
+		HashMap data = new HashMap<String, Integer[]>();
 									//State     City       Data
 			//data[ Confirmed	Deaths	Recovered	Active ]
 							
-	
+		//City0	State1	Confirmed2	Deaths3	Recovered4	Active5
+
 		//split method 
 		try {
 			File file = new File("covid.csv");
@@ -63,11 +67,22 @@ public class driverHashMaps {
 		
 		while(scanner.hasNextLine()) {
 		String[] row = scanner.nextLine().split(",");
-		//System.out.print(str.);
-		//data.put(row[1],row[0]+row[2,row.length] );
+		//System.out.println(Arrays.toString(row));
+		//data.put(row[1],row[2]);
+		//System.out.println(Arrays.toString(row));
+		int[] nums = new int[4];
+		//nums[0] =  Integer.parseInt(row[2]);
+		//nums[1] =  Integer.parseInt(row[3]);
+		//nums[2] =  Integer.parseInt(row[4]);
+		//nums[3] =  Integer.parseInt(row[5]);
+
+		data.put(row[1], row[3]);
 		
 		}
 		
+		System.out.println(data.get("California"));
+		//System.out.println(data);
+
 		} catch (FileNotFoundException e) {
 		System.out.println(e);
 		}
