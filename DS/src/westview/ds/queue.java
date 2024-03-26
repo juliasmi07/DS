@@ -2,11 +2,11 @@ package westview.ds;
 
 import java.util.ArrayList;
 
-public class Queue<Q> {
+public class queue<Q> {
 
 	private ArrayList<Q> data;
 	
-	public Queue() {
+	public queue() {
 	
 	data = new ArrayList<Q>();
 		

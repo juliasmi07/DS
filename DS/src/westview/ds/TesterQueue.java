@@ -9,7 +9,7 @@ class TesterQueue {
 	@Test
 	void test() {
 		
-	Queue<Integer> myQueue = new Queue<Integer>();
+	queue<Integer> myQueue = new queue<Integer>();
 
 	assert(myQueue.size() == 0);
 	

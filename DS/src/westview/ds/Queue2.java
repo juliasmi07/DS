@@ -10,22 +10,22 @@ public class Queue2<T>{
 
 	
 	public Queue2() {
-	Queue<T> first = new Queue();
-	Queue<T> second = new Queue();
+
 	}
 	
 	
 	public T dequeue() {
 	
 	if(b.size()==0) {
-		return null;
+		return (T) a.pop();
 	}
-	return b.add(a.size()-1);
-	return a.remove(a.size()-1);
-	return b.add(a.size()-1);	
-	return 	a.remove(a.size()-1);
-
+	else {
+		for(int i = 0; i < a.size(); i++) {
+			b.push(a.pop());
+		}
+		return (T) b.pop();
 		
+	}
 	}
 	
 	public int size() {
@@ -34,21 +34,11 @@ public class Queue2<T>{
 	}
 	
 	public boolean empty() {
-	if(a.size() == 0) {
+	if(a.size() == 0 && a.size() == 0) {
 		return true;
 	}
 		return false;
 	}
-	
-	public T peek() {
-	
-	if(A.size() == 0) {
-		return null;
-	}
-	return a.get(a.size()-1);
-	}
-	
-	
 	
 	public void enqeue(T element) {
 	a.push(element);
